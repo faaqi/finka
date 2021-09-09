@@ -1,3 +1,4 @@
+import 'package:finka/screens/MainTabBar.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:finka/screens/splash.dart';
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: Splash(),
+        home: HomeBottomTabs(),
       );
     });
   }

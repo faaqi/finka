@@ -211,10 +211,10 @@ class _HomeBottomTabsState extends State<HomeBottomTabs> {
           confineInSafeArea: true,
           itemCount: 4,
           handleAndroidBackButtonPress: true,
-          stateManagement: false,
+          stateManagement: true,
           hideNavigationBar: _hideNavBar,
           screenTransitionAnimation: ScreenTransitionAnimation(
-            animateTabTransition: true,
+            animateTabTransition: false,
             curve: Curves.ease,
             duration: Duration(milliseconds: 300),
           ),

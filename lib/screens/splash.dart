@@ -12,7 +12,7 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     Future.delayed(Duration(seconds: 3), () {
-      Get.off(HomeBottomTabs());
+      Get.off(() => HomeBottomTabs());
     });
 
     super.initState();
@@ -27,7 +27,7 @@ class _SplashState extends State<Splash> {
         height: 100.h,
         child: Center(
             child: Text(
-          'Breweries',
+          'Finka',
           style: TextStyle(
             color: Colors.orangeAccent,
             fontSize: 20.sp,

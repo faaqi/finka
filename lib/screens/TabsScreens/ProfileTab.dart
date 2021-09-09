@@ -1,4 +1,6 @@
+import 'package:finka/constants/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
 class ProfileTab extends StatefulWidget {
   final BuildContext? menuScreenContext;
@@ -18,6 +20,16 @@ class ProfileTab extends StatefulWidget {
 class _ProfileTabState extends State<ProfileTab> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Center(
+        child: Text(
+          "My Profile",
+          style: TextStyle(
+            color: purpleColor,
+            fontSize: 14.sp,
+          ),
+        ),
+      ),
+    );
   }
 }
