@@ -1,4 +1,4 @@
-import 'package:finka/screens/TabsScreens/HomeTab.dart';
+import 'TabsScreens/HomeTab/HomeTab.dart';
 import 'package:finka/screens/TabsScreens/ShopTab.dart';
 import 'TabsScreens/ProfileTab.dart';
 import 'TabsScreens/RewardsTab.dart';

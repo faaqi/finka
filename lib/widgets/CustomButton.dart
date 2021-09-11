@@ -109,6 +109,7 @@ class CustomButton2 extends StatefulWidget {
   final double? fontSize;
   final borderRadius;
   final fontWeight;
+  final textColor;
   CustomButton2(
       {Key? key,
       this.height,
@@ -119,7 +120,8 @@ class CustomButton2 extends StatefulWidget {
       this.color,
       this.fontSize,
       this.borderRadius,
-      this.fontWeight})
+      this.fontWeight,
+      this.textColor})
       : super(key: key);
 
   @override
@@ -130,29 +132,26 @@ class _CustomButton2State extends State<CustomButton2> {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, size) {
-      return Center(
-        child: InkWell(
-          onTap: widget.onpress,
-          child: Container(
-            child: Center(
-              child: Text(
-                '${widget.title}',
-                style: TextStyle(
-                  fontSize: widget.fontSize ?? 11.0.sp,
-                  color: Colors.white,
-                  fontFamily: 'Avenir-Black',
-                  fontWeight: widget.fontWeight ?? FontWeight.normal,
-                ),
+      return InkWell(
+        onTap: widget.onpress,
+        child: Container(
+          child: Center(
+            child: Text(
+              '${widget.title}',
+              style: TextStyle(
+                fontSize: widget.fontSize ?? 11.0.sp,
+                color: widget.textColor ?? Colors.white,
+                fontFamily: 'Avenir-Black',
+                fontWeight: widget.fontWeight ?? FontWeight.normal,
               ),
             ),
-            margin: EdgeInsets.symmetric(horizontal: widget.hMargin),
-            height: widget.height,
-            width: widget.width,
-            decoration: BoxDecoration(
-                borderRadius:
-                    BorderRadius.circular(widget.borderRadius ?? 8.0.w),
-                color: widget.color ?? blueColor),
           ),
+          margin: EdgeInsets.symmetric(horizontal: widget.hMargin),
+          height: widget.height,
+          width: widget.width,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(widget.borderRadius ?? 8.0.w),
+              color: widget.color ?? blueColor),
         ),
       );
     });

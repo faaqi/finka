@@ -1,6 +1,9 @@
 import 'package:finka/constants/colors.dart';
+import 'package:finka/screens/TabsScreens/HomeTab/bank_account.dart';
+import 'package:finka/screens/TabsScreens/HomeTab/community_screen.dart';
 import 'package:finka/widgets/CustomDashboardDesign.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 
 class HomeTab extends StatefulWidget {
@@ -90,14 +93,25 @@ class _HomeTabState extends State<HomeTab> with SingleTickerProviderStateMixin {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Container(
-                            height: 15.h,
-                            width: 30.w,
-                            child: Image.asset("assets/icon/bank_record.png")),
-                        Container(
-                            height: 15.h,
-                            width: 30.w,
-                            child: Image.asset("assets/icon/social.png")),
+                        InkWell(
+                          onTap: () {
+                            Get.to(() => BankAccount());
+                          },
+                          child: Container(
+                              height: 15.h,
+                              width: 30.w,
+                              child:
+                                  Image.asset("assets/icon/bank_record.png")),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            Get.to(() => CommunityScreen());
+                          },
+                          child: Container(
+                              height: 15.h,
+                              width: 30.w,
+                              child: Image.asset("assets/icon/social.png")),
+                        ),
                         Container(
                             height: 15.h,
                             width: 30.w,
@@ -183,17 +197,19 @@ class _HomeTabState extends State<HomeTab> with SingleTickerProviderStateMixin {
                           width: 5.w,
                         ),
                         Material(
-                          elevation: 3,
+                          elevation: 5,
                           borderRadius: BorderRadius.all(
                             Radius.circular(2.5.w),
                           ),
                           color: purpleColor,
-                          child: IconButton(
-                              onPressed: () {},
-                              icon: Icon(
-                                Icons.search,
-                                color: Colors.white,
-                              )),
+                          child: Padding(
+                            padding: EdgeInsets.all(3.w),
+                            child: Container(
+                                width: 2.5.h,
+                                height: 2.5.h,
+                                child:
+                                    Image.asset("assets/icon/filter_icon.png")),
+                          ),
                         ),
                       ],
                     ),
