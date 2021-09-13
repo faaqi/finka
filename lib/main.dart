@@ -1,3 +1,5 @@
+import 'package:finka/screens/Authentication/login.dart';
+import 'package:finka/screens/Authentication/registeration.dart';
 import 'package:finka/screens/MainTabBar.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: HomeBottomTabs(),
+        home: Registeration(),
       );
     });
   }

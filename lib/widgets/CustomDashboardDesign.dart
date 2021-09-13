@@ -1,3 +1,4 @@
+import 'package:finka/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomDashboardDesign extends CustomPainter {
@@ -32,7 +33,7 @@ class CustomDashboardDesign extends CustomPainter {
     path_0.close();
 
     Paint paint_0_fill = Paint()..style = PaintingStyle.fill;
-    paint_0_fill.color = Color(0xff9B51E0).withOpacity(1.0);
+    paint_0_fill.color = purpleColor.withOpacity(1.0);
     canvas.drawPath(path_0, paint_0_fill);
   }
 

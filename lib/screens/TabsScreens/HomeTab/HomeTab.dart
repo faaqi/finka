@@ -171,21 +171,24 @@ class _HomeTabState extends State<HomeTab> with SingleTickerProviderStateMixin {
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.all(
-                                  Radius.circular(30),
+                                  Radius.circular(10),
                                 ),
-                                borderSide: BorderSide(color: Colors.black),
+                                borderSide: BorderSide(
+                                    color: Colors.grey[300]!, width: 1.0),
                               ),
                               errorBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.all(
-                                  Radius.circular(30),
+                                  Radius.circular(10),
                                 ),
-                                borderSide: BorderSide(color: Colors.black),
+                                borderSide: BorderSide(
+                                    color: Colors.grey[300]!, width: 1.0),
                               ),
                               focusedErrorBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.all(
-                                  Radius.circular(30),
+                                  Radius.circular(10),
                                 ),
-                                borderSide: BorderSide(color: Colors.black),
+                                borderSide: BorderSide(
+                                    color: Colors.grey[300]!, width: 1.0),
                               ),
                             ),
                             keyboardType: TextInputType.emailAddress,

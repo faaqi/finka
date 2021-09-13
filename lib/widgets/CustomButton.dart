@@ -157,3 +157,78 @@ class _CustomButton2State extends State<CustomButton2> {
     });
   }
 }
+
+class NextButton extends StatefulWidget {
+  final height;
+  final width;
+  final hMargin;
+  final onpress;
+  final String? title;
+  final Color? color;
+  final double? fontSize;
+  final borderRadius;
+  final fontWeight;
+  final textColor;
+  NextButton(
+      {Key? key,
+      this.height,
+      this.width,
+      this.onpress,
+      this.hMargin,
+      this.title,
+      this.color,
+      this.fontSize,
+      this.borderRadius,
+      this.fontWeight,
+      this.textColor})
+      : super(key: key);
+
+  @override
+  _NextButtonState createState() => _NextButtonState();
+}
+
+class _NextButtonState extends State<NextButton> {
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(builder: (context, size) {
+      return InkWell(
+        onTap: widget.onpress,
+        child: Container(
+          padding: EdgeInsets.symmetric(
+            horizontal: 5.w,
+          ),
+          child: Row(
+            children: [
+              Text(
+                '${widget.title}',
+                style: TextStyle(
+                  fontSize: widget.fontSize ?? 11.0.sp,
+                  color: widget.textColor ?? Colors.white,
+                  fontFamily: 'Avenir-Black',
+                  fontWeight: widget.fontWeight ?? FontWeight.normal,
+                ),
+              ),
+              Spacer(),
+              Container(
+                padding: EdgeInsets.all(1.w),
+                decoration:
+                    BoxDecoration(shape: BoxShape.circle, color: Colors.white),
+                child: Icon(
+                  Icons.arrow_forward_outlined,
+                  color: purpleColor,
+                  size: 6.w,
+                ),
+              )
+            ],
+          ),
+          margin: EdgeInsets.symmetric(horizontal: widget.hMargin),
+          height: widget.height,
+          width: widget.width,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(widget.borderRadius ?? 8.0.w),
+              color: widget.color ?? blueColor),
+        ),
+      );
+    });
+  }
+}
