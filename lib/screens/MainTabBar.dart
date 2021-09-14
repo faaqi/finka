@@ -1,7 +1,7 @@
+import 'TabsScreens/ChatsTab.dart';
 import 'TabsScreens/HomeTab/HomeTab.dart';
 import 'package:finka/screens/TabsScreens/ShopTab.dart';
 import 'TabsScreens/ProfileTab.dart';
-import 'TabsScreens/RewardsTab.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
@@ -113,7 +113,7 @@ class _HomeBottomTabsState extends State<HomeBottomTabs> {
           // });
         },
       ),
-      RewardsTab(
+      ChatsTab(
         menuScreenContext: widget.menuScreenContext,
         hideStatus: _hideNavBar,
         onScreenHideButtonPressed: () {
@@ -152,13 +152,13 @@ class _HomeBottomTabsState extends State<HomeBottomTabs> {
       ),
       BottomIcon(
         isSelected: false,
-        unselectedImage: 'assets/bottomIcons/rewards_unselected.png',
-        selectedImage: 'assets/bottomIcons/rewards_selected.png',
+        unselectedImage: 'assets/bottomIcons/chat_icon_unselected.png',
+        selectedImage: 'assets/bottomIcons/chat_icon_selected.png',
       ),
       BottomIcon(
         isSelected: false,
-        unselectedImage: 'assets/bottomIcons/shop_unselected.png',
-        selectedImage: 'assets/bottomIcons/shop_selected.png',
+        unselectedImage: 'assets/bottomIcons/fvrt_icon_unselected.png',
+        selectedImage: 'assets/bottomIcons/fvrt_icon_selected.png',
       ),
       BottomIcon(
         isSelected: false,

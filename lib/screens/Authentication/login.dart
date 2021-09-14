@@ -55,21 +55,20 @@ class _LoginState extends State<Login> {
                     children: [
                       Icon(
                         Icons.arrow_back_ios_new,
-                        color: purpleColor,
                         size: 7.w,
                       ),
                       Text(
                         'Login',
                         style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15.sp,
-                            color: purpleColor),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15.sp,
+                        ),
                       ),
                     ],
                   ),
                 ),
                 SizedBox(
-                  height: 10.h,
+                  height: 15.h,
                 ),
                 Center(
                   child: CircleAvatar(
@@ -93,7 +92,7 @@ class _LoginState extends State<Login> {
                         Text(
                           'Email',
                           style: TextStyle(
-                            color: purpleColor,
+                            color: Colors.grey,
                             fontSize: 12.sp,
                             fontWeight: FontWeight.bold,
                           ),
@@ -150,7 +149,7 @@ class _LoginState extends State<Login> {
                         Text(
                           'Password',
                           style: TextStyle(
-                            color: purpleColor,
+                            color: Colors.grey,
                             fontSize: 12.sp,
                             fontWeight: FontWeight.bold,
                           ),
@@ -234,7 +233,7 @@ class _LoginState extends State<Login> {
                             child: Text(
                               'Forgot Password?',
                               style: TextStyle(
-                                color: purpleColor,
+                                color: Color(0xff22215B),
                                 fontSize: 11.0.sp,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -254,7 +253,11 @@ class _LoginState extends State<Login> {
                   width: 100.w,
                   hMargin: 10.w,
                   fontSize: 13.sp,
-                  onpress: () {},
+                  onpress: () {
+                    if (validateAndSave()) {
+                      Get.to(() => HomeBottomTabs());
+                    }
+                  },
                   borderRadius: 3.w,
                   color: purpleColor,
                 ),
@@ -275,10 +278,10 @@ class _LoginState extends State<Login> {
                         TextSpan(
                             text: 'Register a new account',
                             style: TextStyle(
-                                color: purpleColor,
-                                fontWeight: FontWeight.w700,
-                                fontSize: 12.0.sp,
-                                fontFamily: 'Avenir-Black'),
+                              color: Color(0xff22215B),
+                              fontWeight: FontWeight.w700,
+                              fontSize: 12.0.sp,
+                            ),
                             recognizer: TapGestureRecognizer()
                               ..onTap = () {
                                 Get.to(() => HomeBottomTabs());

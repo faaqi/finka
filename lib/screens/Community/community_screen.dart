@@ -1,4 +1,5 @@
 import 'package:finka/constants/colors.dart';
+import 'package:finka/screens/Rewards/rewards.dart';
 import 'package:finka/widgets/CustomButton.dart';
 import 'package:finka/widgets/CustomDashboardDesign.dart';
 import 'package:flutter/material.dart';
@@ -77,6 +78,29 @@ class CommunityScreen extends StatelessWidget {
                     ),
                     SizedBox(
                       height: 3.h,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                            height: 15.h,
+                            width: 30.w,
+                            child: Image.asset("assets/icon/ticket_star.png")),
+                        Container(
+                            height: 15.h,
+                            width: 30.w,
+                            child: Image.asset("assets/icon/work_btn.png")),
+                        InkWell(
+                          onTap: () {
+                            Get.to(() => Rewards());
+                          },
+                          child: Container(
+                              height: 15.h,
+                              width: 30.w,
+                              child:
+                                  Image.asset("assets/icon/rewards_btn.png")),
+                        ),
+                      ],
                     ),
                     Row(
                       children: [
@@ -198,7 +222,7 @@ class CommunityScreen extends StatelessWidget {
                       ],
                     ),
                     Container(
-                      height: 22.h,
+                      height: 25.h,
                       child: ListView.builder(
                           shrinkWrap: true,
                           itemCount: 4,
@@ -221,22 +245,22 @@ class CommunityScreen extends StatelessWidget {
                                   Stack(
                                     children: [
                                       Container(
-                                          width: 35.w,
-                                          height: 36.w,
+                                          width: 43.w,
+                                          height: 43.w,
                                           decoration: BoxDecoration(
                                             borderRadius: BorderRadius.all(
-                                                Radius.circular(2.w)),
+                                                Radius.circular(4.w)),
                                           ),
                                           child: ClipRRect(
                                             borderRadius: BorderRadius.all(
-                                                Radius.circular(2.w)),
+                                                Radius.circular(4.w)),
                                             child: Image.asset(
                                               "assets/images/pic.jpg",
                                               fit: BoxFit.cover,
                                             ),
                                           )),
                                       Positioned(
-                                        top: 1.6.h,
+                                        bottom: 1.6.h,
                                         right: 2.5.w,
                                         child: Container(
                                           decoration: BoxDecoration(
@@ -244,12 +268,15 @@ class CommunityScreen extends StatelessWidget {
                                             color: Colors.white,
                                           ),
                                           padding: EdgeInsets.all(1.w),
-                                          child: Center(
-                                            child: Icon(
-                                              Icons.favorite,
-                                              color: purpleColor,
-                                              size: 6.w,
-                                            ),
+                                          child: CustomButton2(
+                                            title: 'View',
+                                            color: Colors.deepOrangeAccent,
+                                            textColor: Colors.white,
+                                            borderRadius: 2.w,
+                                            height: 4.h,
+                                            width: 16.w,
+                                            hMargin: 0.0,
+                                            onpress: () {},
                                           ),
                                         ),
                                       ),
@@ -314,11 +341,11 @@ class CommunityScreen extends StatelessWidget {
                                         height: 36.w,
                                         decoration: BoxDecoration(
                                           borderRadius: BorderRadius.all(
-                                              Radius.circular(2.w)),
+                                              Radius.circular(4.w)),
                                         ),
                                         child: ClipRRect(
                                           borderRadius: BorderRadius.all(
-                                              Radius.circular(2.w)),
+                                              Radius.circular(4.w)),
                                           child: Image.asset(
                                             "assets/images/download.jpg",
                                             fit: BoxFit.cover,

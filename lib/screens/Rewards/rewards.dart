@@ -1,15 +1,16 @@
 import 'package:finka/widgets/CustomButton.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 import 'package:finka/constants/colors.dart';
 import 'package:finka/widgets/CustomDashboardDesign.dart';
 
-class RewardsTab extends StatefulWidget {
+class Rewards extends StatefulWidget {
   final BuildContext? menuScreenContext;
   final Function? onScreenHideButtonPressed;
   final bool? hideStatus;
-  const RewardsTab(
+  const Rewards(
       {Key? key,
       this.menuScreenContext,
       this.onScreenHideButtonPressed,
@@ -17,10 +18,10 @@ class RewardsTab extends StatefulWidget {
       : super(key: key);
 
   @override
-  _RewardsTabState createState() => _RewardsTabState();
+  _RewardsState createState() => _RewardsState();
 }
 
-class _RewardsTabState extends State<RewardsTab> {
+class _RewardsState extends State<Rewards> {
   TextEditingController searchTextController = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -45,12 +46,25 @@ class _RewardsTabState extends State<RewardsTab> {
                       height: 5.h,
                     ),
                     ListTile(
-                      leading: IconButton(
-                        onPressed: () {},
-                        icon: Icon(
-                          Icons.menu_rounded,
-                          color: Colors.white,
-                          size: 8.w,
+                      leading: InkWell(
+                        onTap: () {
+                          Get.back();
+                        },
+                        child: Container(
+                          margin: EdgeInsets.only(left: 2.w),
+                          decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(3.w)),
+                              border: Border.all(
+                                color: Colors.white,
+                                width: 0.5.w,
+                              )),
+                          padding: EdgeInsets.all(1.w),
+                          child: Icon(
+                            Icons.arrow_back_ios_new,
+                            color: Colors.white,
+                            size: 5.5.w,
+                          ),
                         ),
                       ),
                       trailing: InkWell(
@@ -83,7 +97,7 @@ class _RewardsTabState extends State<RewardsTab> {
                         Container(
                             height: 15.h,
                             width: 30.w,
-                            child: Image.asset("assets/icon/favourite.png")),
+                            child: Image.asset("assets/icon/scan_icon.png")),
                         Container(
                             height: 15.h,
                             width: 30.w,

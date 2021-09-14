@@ -43,14 +43,14 @@ class _ShopTabState extends State<ShopTab> {
                       height: 5.h,
                     ),
                     ListTile(
-                      leading: IconButton(
-                        onPressed: () {},
-                        icon: Icon(
-                          Icons.menu_rounded,
-                          color: Colors.white,
-                          size: 8.w,
-                        ),
-                      ),
+//                      leading: IconButton(
+//                        onPressed: () {},
+//                        icon: Icon(
+//                          Icons.menu_rounded,
+//                          color: Colors.white,
+//                          size: 8.w,
+//                        ),
+//                      ),
                       trailing: InkWell(
                         onTap: () {},
                         child: Container(
@@ -75,24 +75,27 @@ class _ShopTabState extends State<ShopTab> {
                         ),
                       ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                            height: 15.h,
-                            width: 30.w,
-                            child: Image.asset("assets/icon/catalog_icon.png")),
-                        Container(
-                            height: 15.h,
-                            width: 30.w,
-                            child: Image.asset("assets/icon/cart_icon.png")),
-                        Container(
-                            height: 15.h,
-                            width: 30.w,
-                            child:
-                                Image.asset("assets/icon/calendar_icon.png")),
-                      ],
+                    SizedBox(
+                      height: 4.h,
                     ),
+//                    Row(
+//                      mainAxisAlignment: MainAxisAlignment.center,
+//                      children: [
+//                        Container(
+//                            height: 15.h,
+//                            width: 30.w,
+//                            child: Image.asset("assets/icon/catalog_icon.png")),
+//                        Container(
+//                            height: 15.h,
+//                            width: 30.w,
+//                            child: Image.asset("assets/icon/cart_icon.png")),
+//                        Container(
+//                            height: 15.h,
+//                            width: 30.w,
+//                            child:
+//                                Image.asset("assets/icon/calendar_icon.png")),
+//                      ],
+//                    ),
                     Row(
                       children: [
                         SizedBox(
@@ -174,14 +177,25 @@ class _ShopTabState extends State<ShopTab> {
                         SizedBox(
                           width: 3.w,
                         ),
-                        Container(
-                            width: 7.h,
-                            height: 7.h,
-                            child: Image.asset("assets/icon/gift_icon.png")),
+                        Material(
+                          elevation: 5,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(2.5.w),
+                          ),
+                          color: purpleColor,
+                          child: Padding(
+                            padding: EdgeInsets.all(3.w),
+                            child: Container(
+                                width: 2.5.h,
+                                height: 2.5.h,
+                                child:
+                                    Image.asset("assets/icon/filter_icon.png")),
+                          ),
+                        ),
                       ],
                     ),
                     SizedBox(
-                      height: 2.h,
+                      height: 7.h,
                     ),
                     Row(
                       children: [
@@ -192,8 +206,11 @@ class _ShopTabState extends State<ShopTab> {
                             height: 2.5.h,
                             width: 2.5.h,
                             child: Image.asset("assets/icon/save_icon.png")),
+                        SizedBox(
+                          width: 1.w,
+                        ),
                         Text(
-                          'Recommended for you',
+                          'Bucket List',
                           style: TextStyle(
                               color: Colors.black,
                               fontSize: 13.sp,
@@ -202,7 +219,7 @@ class _ShopTabState extends State<ShopTab> {
                       ],
                     ),
                     GridView.builder(
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: BouncingScrollPhysics(),
                         padding: EdgeInsets.symmetric(
                           vertical: 3.h,
                           horizontal: 5.w,
@@ -214,7 +231,7 @@ class _ShopTabState extends State<ShopTab> {
                           crossAxisSpacing: 4.w,
                           childAspectRatio: 0.85,
                         ),
-                        itemCount: 3,
+                        itemCount: 7,
                         itemBuilder: (context, indesx) {
                           return Container(
                             decoration: BoxDecoration(
