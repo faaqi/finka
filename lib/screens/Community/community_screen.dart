@@ -23,6 +23,7 @@ class CommunityScreen extends StatelessWidget {
                 painter: CustomDashboardDesign(),
               ),
               Positioned(
+                ///
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
