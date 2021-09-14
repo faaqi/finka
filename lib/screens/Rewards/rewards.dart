@@ -234,7 +234,7 @@ class _RewardsState extends State<Rewards> {
                         itemBuilder: (context, indesx) {
                           return Container(
                             decoration: BoxDecoration(
-                                color: Colors.blueGrey[50],
+                                color: cardBgColour,
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(4.w))),
                             child: Column(
