@@ -1,6 +1,9 @@
+import 'package:Kollektivet/screens/Cart/cart.dart';
+import 'package:Kollektivet/screens/Notification/notification_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:finka/constants/colors.dart';
-import 'package:finka/widgets/CustomDashboardDesign.dart';
+import 'package:Kollektivet/constants/colors.dart';
+import 'package:Kollektivet/widgets/CustomDashboardDesign.dart';
+import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 
 class ShopTab extends StatefulWidget {
@@ -43,6 +46,19 @@ class _ShopTabState extends State<ShopTab> {
                       height: 5.h,
                     ),
                     ListTile(
+                      leading: Padding(
+                        padding: EdgeInsets.only(
+                          left: 5.w,
+                        ),
+                        child: Text(
+                          "Shop",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18.sp,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
 //                      leading: IconButton(
 //                        onPressed: () {},
 //                        icon: Icon(
@@ -51,30 +67,43 @@ class _ShopTabState extends State<ShopTab> {
 //                          size: 8.w,
 //                        ),
 //                      ),
-                      trailing: InkWell(
-                        onTap: () {},
-                        child: Container(
-                          margin: EdgeInsets.only(right: 3.w),
-                          width: 6.w,
-                          child:
-                              Image.asset('assets/icon/notification_icon.png'),
+                      trailing: Container(
+                        width: 25.w,
+                        child: Row(
+                          children: [
+                            Spacer(),
+                            InkWell(
+                              onTap: () {
+                                Get.to(() => Cart());
+                              },
+                              child: Container(
+                                margin: EdgeInsets.only(right: 3.w),
+                                width: 6.w,
+                                child: Image.asset(
+                                    'assets/newIcons/cart_icon.png'),
+                              ),
+                            ),
+                            SizedBox(
+                              width: 1.5.w,
+                            ),
+                            InkWell(
+                              onTap: () {
+                                Get.to(() => NotificationScreen());
+                              },
+                              child: Container(
+                                margin: EdgeInsets.only(right: 3.w),
+                                width: 6.w,
+                                child: Image.asset(
+                                    'assets/icon/notification_icon.png'),
+                              ),
+                            ),
+                          ],
+                        ).paddingOnly(
+                          right: 1.w,
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(
-                        top: 1.5.h,
-                        left: 5.w,
-                      ),
-                      child: Text(
-                        "Shop",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18.sp,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
+
                     SizedBox(
                       height: 4.h,
                     ),
@@ -195,7 +224,7 @@ class _ShopTabState extends State<ShopTab> {
                       ],
                     ),
                     SizedBox(
-                      height: 7.h,
+                      height: 3.h,
                     ),
                     Row(
                       children: [
@@ -232,7 +261,7 @@ class _ShopTabState extends State<ShopTab> {
                           childAspectRatio: 0.85,
                         ),
                         itemCount: 7,
-                        itemBuilder: (context, indesx) {
+                        itemBuilder: (context, index) {
                           return Container(
                             decoration: BoxDecoration(
                                 color: Colors.blueGrey[50],
@@ -251,8 +280,10 @@ class _ShopTabState extends State<ShopTab> {
                                         borderRadius: BorderRadius.all(
                                           Radius.circular(5.w),
                                         ),
-                                        child: Image.asset(
-                                          "assets/images/pic.jpg",
+                                        child: Image.network(
+                                          index % 2 == 0
+                                              ? "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdYcgJnt8KwRudnpgf1zj4q0rRkgm1pszo1w&usqp=CAU"
+                                              : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbKwu8jUz3HXAxqvCESTBIZAT9EWxAoF260Q&usqp=CAU",
                                           fit: BoxFit.cover,
                                         ),
                                       )),

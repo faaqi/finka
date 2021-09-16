@@ -1,9 +1,6 @@
-import 'package:finka/screens/Authentication/login.dart';
-import 'package:finka/screens/Authentication/registeration.dart';
-import 'package:finka/screens/MainTabBar.dart';
+import 'package:Kollektivet/screens/Authentication/login.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-import 'package:finka/screens/splash.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -16,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Sizer(builder: (context, orientation, deviceType) {
       return GetMaterialApp(
-        title: 'Finka',
+        title: 'Kollektivet',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),

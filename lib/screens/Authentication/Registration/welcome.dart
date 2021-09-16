@@ -1,7 +1,7 @@
-import 'package:finka/constants/colors.dart';
-import 'package:finka/constants/text_styles.dart';
-import 'package:finka/screens/MainTabBar.dart';
-import 'package:finka/widgets/CustomButton.dart';
+import 'package:Kollektivet/constants/colors.dart';
+import 'package:Kollektivet/constants/text_styles.dart';
+import 'package:Kollektivet/screens/MainTabBar.dart';
+import 'package:Kollektivet/widgets/CustomButton.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:get/get.dart';
@@ -39,7 +39,8 @@ class Welcome extends StatelessWidget {
             fontSize: 13.sp,
             fontWeight: FontWeight.w500,
             onpress: () {
-              Get.to(() => HomeBottomTabs());
+              Get.snackbar(
+                  'Coming Soon', "Please login using test credentials");
             },
             color: Colors.white,
             textColor: Colors.black,

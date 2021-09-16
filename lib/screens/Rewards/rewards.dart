@@ -1,10 +1,11 @@
-import 'package:finka/widgets/CustomButton.dart';
+import 'package:Kollektivet/widgets/CustomButton.dart';
+import 'package:Kollektivet/widgets/CustomButton.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
-import 'package:finka/constants/colors.dart';
-import 'package:finka/widgets/CustomDashboardDesign.dart';
+import 'package:Kollektivet/constants/colors.dart';
+import 'package:Kollektivet/widgets/CustomDashboardDesign.dart';
 
 class Rewards extends StatefulWidget {
   final BuildContext? menuScreenContext;

@@ -1,7 +1,8 @@
-import 'package:finka/constants/colors.dart';
-import 'package:finka/screens/Rewards/rewards.dart';
-import 'package:finka/widgets/CustomButton.dart';
-import 'package:finka/widgets/CustomDashboardDesign.dart';
+import 'package:Kollektivet/constants/colors.dart';
+import 'package:Kollektivet/screens/Rewards/rewards.dart';
+import 'package:Kollektivet/screens/product_detail.dart';
+import 'package:Kollektivet/widgets/CustomButton.dart';
+import 'package:Kollektivet/widgets/CustomDashboardDesign.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
@@ -255,8 +256,10 @@ class CommunityScreen extends StatelessWidget {
                                           child: ClipRRect(
                                             borderRadius: BorderRadius.all(
                                                 Radius.circular(4.w)),
-                                            child: Image.asset(
-                                              "assets/images/pic.jpg",
+                                            child: Image.network(
+                                              index % 2 == 0
+                                                  ? "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdYcgJnt8KwRudnpgf1zj4q0rRkgm1pszo1w&usqp=CAU"
+                                                  : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbKwu8jUz3HXAxqvCESTBIZAT9EWxAoF260Q&usqp=CAU",
                                               fit: BoxFit.cover,
                                             ),
                                           )),
@@ -277,7 +280,9 @@ class CommunityScreen extends StatelessWidget {
                                             height: 4.h,
                                             width: 16.w,
                                             hMargin: 0.0,
-                                            onpress: () {},
+                                            onpress: () {
+                                              Get.to(() => ProductDetail());
+                                            },
                                           ),
                                         ),
                                       ),
@@ -347,8 +352,10 @@ class CommunityScreen extends StatelessWidget {
                                         child: ClipRRect(
                                           borderRadius: BorderRadius.all(
                                               Radius.circular(4.w)),
-                                          child: Image.asset(
-                                            "assets/images/download.jpg",
+                                          child: Image.network(
+                                            indesx % 2 == 0
+                                                ? "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdYcgJnt8KwRudnpgf1zj4q0rRkgm1pszo1w&usqp=CAU"
+                                                : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbKwu8jUz3HXAxqvCESTBIZAT9EWxAoF260Q&usqp=CAU",
                                             fit: BoxFit.cover,
                                           ),
                                         )),
@@ -376,7 +383,7 @@ class CommunityScreen extends StatelessWidget {
                                   height: 2.w,
                                 ),
                                 Text(
-                                  'Event Name',
+                                  indesx % 2 == 0 ? '\$ 40.0' : '\$ 100.0',
                                   style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.w500,
@@ -386,7 +393,7 @@ class CommunityScreen extends StatelessWidget {
                                   height: 1.w,
                                 ),
                                 Text(
-                                  'Category',
+                                  'Local',
                                   style: TextStyle(
                                     color: Colors.grey,
                                   ),

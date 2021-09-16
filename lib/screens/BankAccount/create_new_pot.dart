@@ -1,5 +1,5 @@
-import 'package:finka/constants/colors.dart';
-import 'package:finka/widgets/CustomButton.dart';
+import 'package:Kollektivet/constants/colors.dart';
+import 'package:Kollektivet/widgets/CustomButton.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';

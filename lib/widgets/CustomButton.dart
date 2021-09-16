@@ -1,4 +1,4 @@
-import 'package:finka/constants/colors.dart';
+import 'package:Kollektivet/constants/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
@@ -79,7 +79,7 @@ class _OutlineCustomButtonState extends State<OutlineCustomButton> {
               child: Text(
                 '${widget.title}',
                 style: TextStyle(
-                    fontSize: widget.fontSize ?? 12.0.sp, color: blueColor),
+                    fontSize: widget.fontSize ?? 12.0.sp, color: purpleColor),
               ),
             ),
             margin: EdgeInsets.symmetric(horizontal: widget.hMargin),
@@ -89,7 +89,10 @@ class _OutlineCustomButtonState extends State<OutlineCustomButton> {
               color: Colors.white,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(30)),
-                side: BorderSide(width: 2, color: blueColor),
+                side: BorderSide(
+                  width: 2,
+                  color: purpleColor,
+                ),
               ),
             ),
           ),

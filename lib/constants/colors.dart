@@ -8,3 +8,8 @@ const purpleColor = Colors.deepPurpleAccent;
 const blueColor = Color(0xff2D9CDB);
 
 const cardBgColour = Color(0xffE8F1FD);
+
+const lightPinkColour = Color(0xffFDE8EA);
+const lightGreenColour = Color(0xff6FCF97);
+
+const lightGrey = Color(0xFFDDDDDD);

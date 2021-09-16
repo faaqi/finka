@@ -1,10 +1,10 @@
-import 'package:finka/constants/colors.dart';
-import 'package:finka/screens/BankAccount/add_new_card.dart';
-import 'package:finka/screens/BankAccount/add_transaction.dart';
-import 'package:finka/screens/BankAccount/create_new_pot.dart';
-import 'package:finka/screens/BankAccount/create_savings_group.dart';
-import 'package:finka/widgets/CustomButton.dart';
-import 'package:finka/widgets/CustomDashboardDesign.dart';
+import 'package:Kollektivet/constants/colors.dart';
+import 'package:Kollektivet/screens/BankAccount/add_new_card.dart';
+import 'package:Kollektivet/screens/BankAccount/add_transaction.dart';
+import 'package:Kollektivet/screens/BankAccount/create_new_pot.dart';
+import 'package:Kollektivet/screens/BankAccount/create_savings_group.dart';
+import 'package:Kollektivet/widgets/CustomButton.dart';
+import 'package:Kollektivet/widgets/CustomDashboardDesign.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -136,7 +136,7 @@ class _BankAccountState extends State<BankAccount> {
                             Get.to(() => CreateSavingsGroup());
                           },
                           child: Container(
-                              height: 14.h,
+                              height: 15.h,
                               width: 30.w,
                               child: Image.asset("assets/icon/group_btn.png")),
                         ),
@@ -145,13 +145,13 @@ class _BankAccountState extends State<BankAccount> {
                             Get.to(() => AddTransaction());
                           },
                           child: Container(
-                              height: 14.h,
+                              height: 15.h,
                               width: 30.w,
                               child: Image.asset(
                                   "assets/icon/transactions_btn.png")),
                         ),
                         Container(
-                            height: 14.h,
+                            height: 15.h,
                             width: 30.w,
                             child: Image.asset("assets/icon/swap_btn.png")),
                       ],

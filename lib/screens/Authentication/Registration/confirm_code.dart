@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:finka/constants/colors.dart';
-import 'package:finka/constants/text_styles.dart';
-import 'package:finka/screens/Authentication/Registration/personal_info.dart';
-import 'package:finka/screens/Authentication/login.dart';
-import 'package:finka/widgets/CustomButton.dart';
+import 'package:Kollektivet/constants/colors.dart';
+import 'package:Kollektivet/constants/text_styles.dart';
+import 'package:Kollektivet/screens/Authentication/Registration/personal_info.dart';
+import 'package:Kollektivet/screens/Authentication/login.dart';
+import 'package:Kollektivet/widgets/CustomButton.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

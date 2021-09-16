@@ -1,6 +1,6 @@
 import 'TabsScreens/ChatsTab.dart';
 import 'TabsScreens/HomeTab/HomeTab.dart';
-import 'package:finka/screens/TabsScreens/ShopTab.dart';
+import 'package:Kollektivet/screens/TabsScreens/ShopTab.dart';
 import 'TabsScreens/ProfileTab.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';

@@ -1,6 +1,7 @@
-import 'package:finka/constants/colors.dart';
-import 'package:finka/screens/MainTabBar.dart';
-import 'package:finka/widgets/CustomButton.dart';
+import 'package:Kollektivet/constants/colors.dart';
+import 'package:Kollektivet/screens/Authentication/registeration.dart';
+import 'package:Kollektivet/screens/MainTabBar.dart';
+import 'package:Kollektivet/widgets/CustomButton.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -255,7 +256,10 @@ class _LoginState extends State<Login> {
                   fontSize: 13.sp,
                   onpress: () {
                     if (validateAndSave()) {
-                      Get.to(() => HomeBottomTabs());
+                      if (emailController.text.trim() == "tester@finka.com" &&
+                          passwordController.text.trim() == "1@Finka") {
+                        Get.to(() => HomeBottomTabs());
+                      }
                     }
                   },
                   borderRadius: 3.w,
@@ -284,7 +288,7 @@ class _LoginState extends State<Login> {
                             ),
                             recognizer: TapGestureRecognizer()
                               ..onTap = () {
-                                Get.to(() => HomeBottomTabs());
+                                Get.to(() => Registeration());
                               }),
                       ],
                     ),

@@ -1,4 +1,4 @@
-import 'package:finka/constants/colors.dart';
+import 'package:Kollektivet/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomDashboardDesign extends CustomPainter {
